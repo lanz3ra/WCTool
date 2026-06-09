@@ -351,72 +351,102 @@
 
   // ── TODOS OS JOGOS DA FASE DE GRUPOS ──
   // Horários em horário local do estádio (aproximado)
-  // hf/af = caminho para a imagem em FLAGS/
   const F = s => 'assets/flags/' + s + '.png';
   const GAMES = [
+    // ── 1ª RODADA ──
     // 11 jun
-    { date:'2026-06-11', time:'17:00', home:'México',        hf:F('MEX'), away:'Argentina',      af:F('ARG'), group:'Grupo A', venue:'AT&T Stadium · Dallas, TX' },
-    { date:'2026-06-11', time:'20:00', home:'Equador',       hf:F('ECU'), away:'Inglaterra',     af:F('ENG'), group:'Grupo B', venue:'SoFi Stadium · Los Angeles, CA' },
+    { date:'2026-06-11', time:'16:00', home:'México',              hf:F('MEX'), away:'África do Sul',        af:F('RSA'), group:'Grupo A', venue:'Estadio Azteca · Cidade do México' },
+    { date:'2026-06-11', time:'23:00', home:'Coreia do Sul',       hf:F('KOR'), away:'Rep. Tcheca',          af:F('CZE'), group:'Grupo A', venue:'Estadio Akron · Guadalajara' },
     // 12 jun
-    { date:'2026-06-12', time:'14:00', home:'Países Baixos', hf:F('NED'), away:'Iraque',         af:F('IRQ'), group:'Grupo C', venue:'Lincoln Financial · Filadélfia, PA' },
-    { date:'2026-06-12', time:'17:00', home:'EUA',           hf:F('USA'), away:'Arábia Saudita', af:F('KSA'), group:'Grupo D', venue:'SoFi Stadium · Los Angeles, CA' },
-    { date:'2026-06-12', time:'20:00', home:'Portugal',      hf:F('POR'), away:'Zimbábue',       af:F('ZIM'), group:'Grupo E', venue:'Gillette Stadium · Boston, MA' },
+    { date:'2026-06-12', time:'16:00', home:'Canadá',              hf:F('CAN'), away:'Bósnia e Herzegovina', af:F('BIH'), group:'Grupo B', venue:'BMO Field · Toronto' },
+    { date:'2026-06-12', time:'22:00', home:'EUA',                 hf:F('USA'), away:'Paraguai',             af:F('PAR'), group:'Grupo D', venue:'SoFi Stadium · Los Angeles' },
     // 13 jun
-    { date:'2026-06-13', time:'13:00', home:'Alemanha',      hf:F('GER'), away:'Japão',          af:F('JPN'), group:'Grupo F', venue:'MetLife Stadium · Nova York, NJ' },
-    { date:'2026-06-13', time:'16:00', home:'Espanha',       hf:F('ESP'), away:'Bélgica',        af:F('BEL'), group:'Grupo G', venue:'Rose Bowl · Los Angeles, CA' },
-    { date:'2026-06-13', time:'19:00', home:'Brasil',        hf:F('BRA'), away:'Irã',            af:F('IRN'), group:'Grupo H', venue:"Levi's Stadium · San Jose, CA" },
+    { date:'2026-06-13', time:'01:00', home:'Austrália',           hf:F('AUS'), away:'Turquia',              af:F('TUR'), group:'Grupo D', venue:'BC Place · Vancouver' },
+    { date:'2026-06-13', time:'16:00', home:'Catar',               hf:F('QAT'), away:'Suíça',                af:F('SUI'), group:'Grupo B', venue:"Levi's Stadium · Santa Clara" },
+    { date:'2026-06-13', time:'19:00', home:'Brasil',              hf:F('BRA'), away:'Marrocos',             af:F('MAR'), group:'Grupo C', venue:'MetLife Stadium · Nova York/NJ' },
+    { date:'2026-06-13', time:'22:00', home:'Haiti',               hf:F('HAI'), away:'Escócia',              af:F('SCO'), group:'Grupo C', venue:'Gillette Stadium · Boston' },
     // 14 jun
-    { date:'2026-06-14', time:'13:00', home:'França',        hf:F('FRA'), away:'Albânia',        af:F('ALB'), group:'Grupo I', venue:'AT&T Stadium · Dallas, TX' },
-    { date:'2026-06-14', time:'16:00', home:'Uruguai',       hf:F('URU'), away:'Cazaquistão',    af:F('KAZ'), group:'Grupo J', venue:'Arrowhead Stadium · Kansas City, MO' },
-    { date:'2026-06-14', time:'19:00', home:'Coreia do Sul', hf:F('KOR'), away:'Costa Rica',     af:F('CRC'), group:'Grupo K', venue:'Lumen Field · Seattle, WA' },
+    { date:'2026-06-14', time:'14:00', home:'Alemanha',            hf:F('GER'), away:'Curaçau',              af:F('CUW'), group:'Grupo E', venue:'NRG Stadium · Houston' },
+    { date:'2026-06-14', time:'17:00', home:'Holanda',             hf:F('NED'), away:'Japão',                af:F('JPN'), group:'Grupo F', venue:'AT&T Stadium · Dallas' },
+    { date:'2026-06-14', time:'20:00', home:'Costa do Marfim',     hf:F('CIV'), away:'Equador',              af:F('ECU'), group:'Grupo E', venue:'Lincoln Financial · Filadélfia' },
+    { date:'2026-06-14', time:'23:00', home:'Suécia',              hf:F('SWE'), away:'Tunísia',              af:F('TUN'), group:'Grupo F', venue:'Estadio BBVA · Monterrey' },
     // 15 jun
-    { date:'2026-06-15', time:'13:00', home:'Austrália',     hf:F('AUS'), away:'Índia',          af:F('IND'), group:'Grupo L', venue:'Estadio Azteca · Cidade do México' },
-    { date:'2026-06-15', time:'16:00', home:'Chile',         hf:F('CHI'), away:'Colômbia',       af:F('COL'), group:'Grupo A', venue:'Estadio BBVA · Monterrey' },
-    { date:'2026-06-15', time:'19:00', home:'Senegal',       hf:F('SEN'), away:'Jamaica',        af:F('JAM'), group:'Grupo B', venue:'BC Place · Vancouver, BC' },
+    { date:'2026-06-15', time:'13:00', home:'Espanha',             hf:F('ESP'), away:'Cabo Verde',           af:F('CPV'), group:'Grupo H', venue:'Mercedes-Benz Stadium · Atlanta' },
+    { date:'2026-06-15', time:'16:00', home:'Bélgica',             hf:F('BEL'), away:'Egito',                af:F('EGY'), group:'Grupo G', venue:'Lumen Field · Seattle' },
+    { date:'2026-06-15', time:'19:00', home:'Arábia Saudita',      hf:F('KSA'), away:'Uruguai',              af:F('URU'), group:'Grupo H', venue:'Hard Rock Stadium · Miami' },
+    { date:'2026-06-15', time:'22:00', home:'Irã',                 hf:F('IRN'), away:'Nova Zelândia',        af:F('NZL'), group:'Grupo G', venue:'SoFi Stadium · Los Angeles' },
     // 16 jun
-    { date:'2026-06-16', time:'13:00', home:'Croácia',       hf:F('CRO'), away:'Marrocos',       af:F('MAR'), group:'Grupo C', venue:'Lincoln Financial · Filadélfia, PA' },
-    { date:'2026-06-16', time:'16:00', home:'Paquistão',     hf:F('PAK'), away:'Suíça',          af:F('SUI'), group:'Grupo D', venue:'NRG Stadium · Houston, TX' },
-    { date:'2026-06-16', time:'19:00', home:'Argentina',     hf:F('ARG'), away:'Equador',        af:F('ECU'), group:'Grupo B', venue:'AT&T Stadium · Dallas, TX' },
+    { date:'2026-06-16', time:'14:00', home:'Argentina',           hf:F('ARG'), away:'Argélia',              af:F('ALG'), group:'Grupo J', venue:'Arrowhead Stadium · Kansas City' },
+    { date:'2026-06-16', time:'16:00', home:'França',              hf:F('FRA'), away:'Senegal',              af:F('SEN'), group:'Grupo I', venue:'MetLife Stadium · Nova York/NJ' },
+    { date:'2026-06-16', time:'19:00', home:'Iraque',              hf:F('IRQ'), away:'Noruega',              af:F('NOR'), group:'Grupo I', venue:'Gillette Stadium · Boston' },
+    { date:'2026-06-17', time:'01:00', home:'Áustria',             hf:F('AUT'), away:'Jordânia',             af:F('JOR'), group:'Grupo J', venue:"Levi's Stadium · Santa Clara" },
     // 17 jun
-    { date:'2026-06-17', time:'13:00', home:'Gana',          hf:F('GHA'), away:'Japão',          af:F('JPN'), group:'Grupo F', venue:'Estadio Universitario · Monterrey' },
-    { date:'2026-06-17', time:'16:00', home:'México',        hf:F('MEX'), away:'Chile',          af:F('CHI'), group:'Grupo A', venue:'Estadio Azteca · Cidade do México' },
-    { date:'2026-06-17', time:'19:00', home:'Irã',           hf:F('IRN'), away:'Camarões',       af:F('CMR'), group:'Grupo H', venue:"Levi's Stadium · San Jose, CA" },
+    { date:'2026-06-17', time:'14:00', home:'Portugal',            hf:F('POR'), away:'Rep. Dem. do Congo',   af:F('COD'), group:'Grupo K', venue:'NRG Stadium · Houston' },
+    { date:'2026-06-17', time:'17:00', home:'Inglaterra',          hf:F('ENG'), away:'Croácia',              af:F('CRO'), group:'Grupo L', venue:'AT&T Stadium · Dallas' },
+    { date:'2026-06-17', time:'20:00', home:'Gana',                hf:F('GHA'), away:'Panamá',               af:F('PAN'), group:'Grupo L', venue:'BMO Field · Toronto' },
+    { date:'2026-06-17', time:'23:00', home:'Uzbequistão',         hf:F('UZB'), away:'Colômbia',             af:F('COL'), group:'Grupo K', venue:'Estadio Azteca · Cidade do México' },
+
+    // ── 2ª RODADA ──
     // 18 jun
-    { date:'2026-06-18', time:'13:00', home:'Inglaterra',    hf:F('ENG'), away:'Senegal',        af:F('SEN'), group:'Grupo B', venue:'BC Place · Vancouver, BC' },
-    { date:'2026-06-18', time:'16:00', home:'Brasil',        hf:F('BRA'), away:'Camarões',       af:F('CMR'), group:'Grupo H', venue:"Levi's Stadium · San Jose, CA" },
-    { date:'2026-06-18', time:'19:00', home:'Portugal',      hf:F('POR'), away:'El Salvador',    af:F('SLV'), group:'Grupo E', venue:'Gillette Stadium · Boston, MA' },
+    { date:'2026-06-18', time:'13:00', home:'Rep. Tcheca',         hf:F('CZE'), away:'África do Sul',        af:F('RSA'), group:'Grupo A', venue:'Mercedes-Benz Stadium · Atlanta' },
+    { date:'2026-06-18', time:'16:00', home:'Suíça',               hf:F('SUI'), away:'Bósnia e Herzegovina', af:F('BIH'), group:'Grupo B', venue:'SoFi Stadium · Los Angeles' },
+    { date:'2026-06-18', time:'19:00', home:'Canadá',              hf:F('CAN'), away:'Catar',                af:F('QAT'), group:'Grupo B', venue:'BC Place · Vancouver' },
+    { date:'2026-06-18', time:'22:00', home:'México',              hf:F('MEX'), away:'Coreia do Sul',        af:F('KOR'), group:'Grupo A', venue:'Estadio Akron · Guadalajara' },
     // 19 jun
-    { date:'2026-06-19', time:'13:00', home:'Espanha',       hf:F('ESP'), away:'Turquia',        af:F('TUR'), group:'Grupo G', venue:'Rose Bowl · Los Angeles, CA' },
-    { date:'2026-06-19', time:'16:00', home:'França',        hf:F('FRA'), away:'Paraguai',       af:F('PAR'), group:'Grupo I', venue:'AT&T Stadium · Dallas, TX' },
-    { date:'2026-06-19', time:'19:00', home:'Alemanha',      hf:F('GER'), away:'Gana',           af:F('GHA'), group:'Grupo F', venue:'MetLife Stadium · Nova York, NJ' },
+    { date:'2026-06-19', time:'01:00', home:'Turquia',             hf:F('TUR'), away:'Paraguai',             af:F('PAR'), group:'Grupo D', venue:"Levi's Stadium · Santa Clara" },
+    { date:'2026-06-19', time:'16:00', home:'EUA',                 hf:F('USA'), away:'Austrália',            af:F('AUS'), group:'Grupo D', venue:'Lumen Field · Seattle' },
+    { date:'2026-06-19', time:'19:00', home:'Escócia',             hf:F('SCO'), away:'Marrocos',             af:F('MAR'), group:'Grupo C', venue:'Gillette Stadium · Boston' },
+    { date:'2026-06-19', time:'22:30', home:'Brasil',              hf:F('BRA'), away:'Haiti',                af:F('HAI'), group:'Grupo C', venue:'Lincoln Financial · Filadélfia' },
     // 20 jun
-    { date:'2026-06-20', time:'13:00', home:'Uruguai',       hf:F('URU'), away:'Eslováquia',     af:F('SVK'), group:'Grupo J', venue:'Arrowhead Stadium · Kansas City, MO' },
-    { date:'2026-06-20', time:'16:00', home:'EUA',           hf:F('USA'), away:'Paquistão',      af:F('PAK'), group:'Grupo D', venue:"Levi's Stadium · San Jose, CA" },
-    { date:'2026-06-20', time:'19:00', home:'Colômbia',      hf:F('COL'), away:'Equador',        af:F('ECU'), group:'Grupo B', venue:'BC Place · Vancouver, BC' },
+    { date:'2026-06-20', time:'14:00', home:'Holanda',             hf:F('NED'), away:'Suécia',               af:F('SWE'), group:'Grupo F', venue:'NRG Stadium · Houston' },
+    { date:'2026-06-20', time:'17:00', home:'Alemanha',            hf:F('GER'), away:'Costa do Marfim',      af:F('CIV'), group:'Grupo E', venue:'BMO Field · Toronto' },
+    { date:'2026-06-20', time:'21:00', home:'Equador',             hf:F('ECU'), away:'Curaçau',              af:F('CUW'), group:'Grupo E', venue:'Arrowhead Stadium · Kansas City' },
+    { date:'2026-06-21', time:'01:00', home:'Tunísia',             hf:F('TUN'), away:'Japão',                af:F('JPN'), group:'Grupo F', venue:'Estadio BBVA · Monterrey' },
     // 21 jun
-    { date:'2026-06-21', time:'13:00', home:'Argentina',     hf:F('ARG'), away:'Chile',          af:F('CHI'), group:'Grupo A', venue:'Estadio Azteca · Cidade do México' },
-    { date:'2026-06-21', time:'16:00', home:'Croácia',       hf:F('CRO'), away:'Iraque',         af:F('IRQ'), group:'Grupo C', venue:'Lincoln Financial · Filadélfia, PA' },
-    { date:'2026-06-21', time:'19:00', home:'Brasil',        hf:F('BRA'), away:'Austrália',      af:F('AUS'), group:'Grupo H', venue:'NRG Stadium · Houston, TX' },
+    { date:'2026-06-21', time:'13:00', home:'Espanha',             hf:F('ESP'), away:'Arábia Saudita',       af:F('KSA'), group:'Grupo H', venue:'Mercedes-Benz Stadium · Atlanta' },
+    { date:'2026-06-21', time:'16:00', home:'Bélgica',             hf:F('BEL'), away:'Irã',                  af:F('IRN'), group:'Grupo G', venue:'SoFi Stadium · Los Angeles' },
+    { date:'2026-06-21', time:'19:00', home:'Uruguai',             hf:F('URU'), away:'Cabo Verde',           af:F('CPV'), group:'Grupo H', venue:'Hard Rock Stadium · Miami' },
+    { date:'2026-06-21', time:'22:00', home:'Nova Zelândia',       hf:F('NZL'), away:'Egito',                af:F('EGY'), group:'Grupo G', venue:'BC Place · Vancouver' },
     // 22 jun
-    { date:'2026-06-22', time:'13:00', home:'Portugal',      hf:F('POR'), away:'Zimbábue',       af:F('ZIM'), group:'Grupo E', venue:'Gillette Stadium · Boston, MA' },
-    { date:'2026-06-22', time:'16:00', home:'Espanha',       hf:F('ESP'), away:'Marrocos',       af:F('MAR'), group:'Grupo G', venue:'Rose Bowl · Los Angeles, CA' },
-    { date:'2026-06-22', time:'19:00', home:'Japão',         hf:F('JPN'), away:'Costa Rica',     af:F('CRC'), group:'Grupo K', venue:'Lumen Field · Seattle, WA' },
+    { date:'2026-06-22', time:'14:00', home:'Argentina',           hf:F('ARG'), away:'Áustria',              af:F('AUT'), group:'Grupo J', venue:'AT&T Stadium · Dallas' },
+    { date:'2026-06-22', time:'18:00', home:'França',              hf:F('FRA'), away:'Iraque',               af:F('IRQ'), group:'Grupo I', venue:'Lincoln Financial · Filadélfia' },
+    { date:'2026-06-22', time:'21:00', home:'Noruega',             hf:F('NOR'), away:'Senegal',              af:F('SEN'), group:'Grupo I', venue:'MetLife Stadium · Nova York/NJ' },
+    { date:'2026-06-23', time:'00:00', home:'Jordânia',            hf:F('JOR'), away:'Argélia',              af:F('ALG'), group:'Grupo J', venue:"Levi's Stadium · Santa Clara" },
     // 23 jun
-    { date:'2026-06-23', time:'13:00', home:'França',        hf:F('FRA'), away:'Albânia',        af:F('ALB'), group:'Grupo I', venue:'AT&T Stadium · Dallas, TX' },
-    { date:'2026-06-23', time:'16:00', home:'Alemanha',      hf:F('GER'), away:'Eslováquia',     af:F('SVK'), group:'Grupo F', venue:'MetLife Stadium · Nova York, NJ' },
-    { date:'2026-06-23', time:'19:00', home:'Senegal',       hf:F('SEN'), away:'Equador',        af:F('ECU'), group:'Grupo B', venue:'BC Place · Vancouver, BC' },
+    { date:'2026-06-23', time:'14:00', home:'Portugal',            hf:F('POR'), away:'Uzbequistão',          af:F('UZB'), group:'Grupo K', venue:'NRG Stadium · Houston' },
+    { date:'2026-06-23', time:'17:00', home:'Inglaterra',          hf:F('ENG'), away:'Gana',                 af:F('GHA'), group:'Grupo L', venue:'Gillette Stadium · Boston' },
+    { date:'2026-06-23', time:'20:00', home:'Panamá',              hf:F('PAN'), away:'Croácia',              af:F('CRO'), group:'Grupo L', venue:'BMO Field · Toronto' },
+    { date:'2026-06-23', time:'23:00', home:'Colômbia',            hf:F('COL'), away:'Rep. Dem. do Congo',   af:F('COD'), group:'Grupo K', venue:'Estadio Akron · Guadalajara' },
+
+    // ── 3ª RODADA ──
     // 24 jun
-    { date:'2026-06-24', time:'14:00', home:'Argentina',     hf:F('ARG'), away:'Colômbia',       af:F('COL'), group:'Grupo A', venue:'Estadio BBVA · Monterrey' },
-    { date:'2026-06-24', time:'14:00', home:'México',        hf:F('MEX'), away:'Chile',          af:F('CHI'), group:'Grupo A', venue:'Estadio Azteca · Cidade do México' },
+    { date:'2026-06-24', time:'16:00', home:'Suíça',               hf:F('SUI'), away:'Canadá',               af:F('CAN'), group:'Grupo B', venue:'BC Place · Vancouver' },
+    { date:'2026-06-24', time:'16:00', home:'Bósnia e Herzegovina', hf:F('BIH'), away:'Catar',               af:F('QAT'), group:'Grupo B', venue:'Lumen Field · Seattle' },
+    { date:'2026-06-24', time:'19:00', home:'Escócia',             hf:F('SCO'), away:'Brasil',               af:F('BRA'), group:'Grupo C', venue:'Hard Rock Stadium · Miami' },
+    { date:'2026-06-24', time:'19:00', home:'Marrocos',            hf:F('MAR'), away:'Haiti',                af:F('HAI'), group:'Grupo C', venue:'Mercedes-Benz Stadium · Atlanta' },
+    { date:'2026-06-24', time:'22:00', home:'Rep. Tcheca',         hf:F('CZE'), away:'México',               af:F('MEX'), group:'Grupo A', venue:'Estadio Azteca · Cidade do México' },
+    { date:'2026-06-24', time:'22:00', home:'África do Sul',       hf:F('RSA'), away:'Coreia do Sul',        af:F('KOR'), group:'Grupo A', venue:'Estadio BBVA · Monterrey' },
     // 25 jun
-    { date:'2026-06-25', time:'14:00', home:'Espanha',       hf:F('ESP'), away:'Bélgica',        af:F('BEL'), group:'Grupo G', venue:'Rose Bowl · Los Angeles, CA' },
-    { date:'2026-06-25', time:'14:00', home:'Turquia',       hf:F('TUR'), away:'Marrocos',       af:F('MAR'), group:'Grupo G', venue:'SoFi Stadium · Los Angeles, CA' },
+    { date:'2026-06-25', time:'17:00', home:'Equador',             hf:F('ECU'), away:'Alemanha',             af:F('GER'), group:'Grupo E', venue:'MetLife Stadium · Nova York/NJ' },
+    { date:'2026-06-25', time:'17:00', home:'Curaçau',             hf:F('CUW'), away:'Costa do Marfim',      af:F('CIV'), group:'Grupo E', venue:'Lincoln Financial · Filadélfia' },
+    { date:'2026-06-25', time:'20:00', home:'Japão',               hf:F('JPN'), away:'Suécia',               af:F('SWE'), group:'Grupo F', venue:'AT&T Stadium · Dallas' },
+    { date:'2026-06-25', time:'20:00', home:'Tunísia',             hf:F('TUN'), away:'Holanda',              af:F('NED'), group:'Grupo F', venue:'Arrowhead Stadium · Kansas City' },
+    { date:'2026-06-25', time:'23:00', home:'Turquia',             hf:F('TUR'), away:'EUA',                  af:F('USA'), group:'Grupo D', venue:'SoFi Stadium · Los Angeles' },
+    { date:'2026-06-25', time:'23:00', home:'Paraguai',            hf:F('PAR'), away:'Austrália',            af:F('AUS'), group:'Grupo D', venue:"Levi's Stadium · Santa Clara" },
     // 26 jun
-    { date:'2026-06-26', time:'14:00', home:'Alemanha',      hf:F('GER'), away:'Costa Rica',     af:F('CRC'), group:'Grupo F', venue:'MetLife Stadium · Nova York, NJ' },
-    { date:'2026-06-26', time:'18:00', home:'Portugal',      hf:F('POR'), away:'El Salvador',    af:F('SLV'), group:'Grupo E', venue:'Gillette Stadium · Boston, MA' },
+    { date:'2026-06-26', time:'16:00', home:'Noruega',             hf:F('NOR'), away:'França',               af:F('FRA'), group:'Grupo I', venue:'Gillette Stadium · Boston' },
+    { date:'2026-06-26', time:'16:00', home:'Senegal',             hf:F('SEN'), away:'Iraque',               af:F('IRQ'), group:'Grupo I', venue:'BMO Field · Toronto' },
+    { date:'2026-06-26', time:'21:00', home:'Uruguai',             hf:F('URU'), away:'Espanha',              af:F('ESP'), group:'Grupo H', venue:'Estadio Akron · Guadalajara' },
+    { date:'2026-06-26', time:'21:00', home:'Cabo Verde',          hf:F('CPV'), away:'Arábia Saudita',       af:F('KSA'), group:'Grupo H', venue:'NRG Stadium · Houston' },
+    { date:'2026-06-27', time:'00:00', home:'Egito',               hf:F('EGY'), away:'Irã',                  af:F('IRN'), group:'Grupo G', venue:'Lumen Field · Seattle' },
+    { date:'2026-06-27', time:'00:00', home:'Nova Zelândia',       hf:F('NZL'), away:'Bélgica',              af:F('BEL'), group:'Grupo G', venue:'BC Place · Vancouver' },
     // 27 jun
-    { date:'2026-06-27', time:'14:00', home:'França',        hf:F('FRA'), away:'Uruguai',        af:F('URU'), group:'Grupo I/J', venue:'AT&T Stadium · Dallas, TX' },
-    { date:'2026-06-27', time:'18:00', home:'Brasil',        hf:F('BRA'), away:'Irã',            af:F('IRN'), group:'Grupo H', venue:'NRG Stadium · Houston, TX' },
+    { date:'2026-06-27', time:'18:00', home:'Panamá',              hf:F('PAN'), away:'Inglaterra',           af:F('ENG'), group:'Grupo L', venue:'MetLife Stadium · Nova York/NJ' },
+    { date:'2026-06-27', time:'18:00', home:'Croácia',             hf:F('CRO'), away:'Gana',                 af:F('GHA'), group:'Grupo L', venue:'Lincoln Financial · Filadélfia' },
+    { date:'2026-06-27', time:'20:30', home:'Colômbia',            hf:F('COL'), away:'Portugal',             af:F('POR'), group:'Grupo K', venue:'Hard Rock Stadium · Miami' },
+    { date:'2026-06-27', time:'20:30', home:'Rep. Dem. do Congo',  hf:F('COD'), away:'Uzbequistão',          af:F('UZB'), group:'Grupo K', venue:'Mercedes-Benz Stadium · Atlanta' },
+    { date:'2026-06-27', time:'23:00', home:'Argélia',             hf:F('ALG'), away:'Áustria',              af:F('AUT'), group:'Grupo J', venue:'Arrowhead Stadium · Kansas City' },
+    { date:'2026-06-27', time:'23:00', home:'Jordânia',            hf:F('JOR'), away:'Argentina',            af:F('ARG'), group:'Grupo J', venue:'AT&T Stadium · Dallas' },
   ];
 
   // ── RESULTADOS reais (preencha aqui conforme os jogos acontecerem) ──
